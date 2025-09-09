@@ -73,6 +73,44 @@
             font-size: 0.9em;
             color: #6c757d;
         }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            .container {
+                background-color: #1e1e1e;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            }
+            h1, h2 {
+                color: #ffffff;
+                border-bottom-color: #333;
+            }
+            p, ul {
+                color: #c0c0c0;
+            }
+            strong {
+                color: #d0d0d0;
+            }
+            li {
+                background-color: #2a2a2a;
+                border-left-color: #0056b3;
+            }
+            li strong {
+                color: #ffffff;
+            }
+            a {
+                color: #4dabf7;
+            }
+            a strong {
+                color: #4dabf7;
+            }
+            .footer {
+                color: #888;
+            }
+        }
     </style>
 </head>
 <body>
