@@ -17,6 +17,8 @@
         }
         .container {
             text-align: center;
+            max-width: 720px;
+            padding: 32px 24px;
         }
         .logo {
             max-width: 150px;
@@ -27,6 +29,12 @@
             color: #212529;
             margin-bottom: 40px;
         }
+        .jobs {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
         .job-link {
             display: inline-block;
             padding: 15px 30px;
@@ -36,6 +44,7 @@
             border-radius: 8px;
             font-size: 1.2em;
             transition: background-color 0.3s ease;
+            min-width: 320px;
         }
         .job-link:hover {
             background-color: #0056b3;
@@ -58,13 +67,31 @@
                 background-color: #007bff;
             }
         }
+        @media (max-width: 640px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                padding: 24px 0;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .job-link {
+                min-width: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="eulen.png" alt="Eulen Labs Logo" class="logo">
         <h1>Open Positions</h1>
-        <a href="announcement.html" class="job-link">Expert Software Architect (Core & Reliability)</a>
+        <div class="jobs">
+            <a href="b2b-operations.html" class="job-link">B2B Operations – Scale Bitcoin-Native Payments</a>
+            <a href="senior-devops.html" class="job-link">Senior DevOps Engineer – Cloud, Reliability & Incident Response</a>
+        </div>
     </div>
 </body>
 </html>
